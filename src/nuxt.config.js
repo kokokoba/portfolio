@@ -51,7 +51,8 @@ module.exports = {
     resolve(__dirname, 'css/main.css')
   ],
   plugins: [
-    '~plugins/buefy'
+    '~plugins/buefy',
+    '~plugins/firebase'
   ],
   /*
   ** Customize the progress bar color
@@ -75,11 +76,15 @@ module.exports = {
     //     }],
     //   ],
     // },
+    // アプリケーション内で一度だけインクルードする
+    vendor: [
+      'firebase'
+    ],
     /*
     ** Run ESLint on save
     */
-    extend(config, {isDev, isClient}) {
-      if (isDev && isClient) {
+    extend(config) {
+      if (process.server && process.browser) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

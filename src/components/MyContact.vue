@@ -4,19 +4,18 @@
     <div class="field">
       <label class="label">氏名</label>
       <div class="control has-icons-left has-icons-right">
-        <input class="input" type="text" placeholder="名前を入力してください" required>
+        <input class="input" type="text" v-model="name" placeholder="名前を入力してください" required>
         <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
         </span>
       </div>
     </div>
-
     <div class="field">
       <label class="label">メールアドレス</label>
       <div class="control has-icons-left has-icons-right">
         <input class="input" :class="{'is-danger': isEmailValidation}"
-               v-on:change="checkEmail(value)" type="email"
-               placeholder="メールアドレスを入力してください" value="@gmail.com" required>
+               v-model="email" type="email"
+               placeholder="メールアドレスを入力してください" required>
         <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -30,16 +29,7 @@
     <div class="field">
       <label class="label">お問い合わせ内容</label>
       <div class="control">
-        <textarea class="textarea" placeholder="お問合せ内容を入力してください"></textarea>
-      </div>
-    </div>
-
-    <div class="field">
-      <div class="control">
-        <label class="checkbox">
-          <input id="check" type="checkbox">
-          <label for="check"><a href="../privacy.html" target="_blank" class="icOtherW">個人情報の取り扱い</a>に同意します。</label>
-        </label>
+        <textarea class="textarea" v-model="content" placeholder="お問合せ内容を入力してください"></textarea>
       </div>
     </div>
 
@@ -52,10 +42,14 @@
 </template>
 
 <script>
-    export default {
+
+  export default {
         name: "MyContact",
         data() {
           return {
+            name: "",
+            email:"",
+            content:"",
             isEmailValidation: false,
           }
         },
@@ -66,11 +60,40 @@
             }
           },
           sendMail: function () {
-            const sendMail = ff.httpsCallable('sendMail')
-            let parent = this;
-            sendResults({destination: 'hoge@hoge.com'}).then(function (result) {
-              parent.snackbar = true
-            })
+            const dbRefContact = this.$firebase.database().ref().child('contact').push(
+              {
+                name: this.name,
+                email: this.email,
+                content: this.content
+              });
+            // dbRefContact.on('value', snap => {
+            //   console.log(JSON.stringify(snap.val(), null, 3));
+            // });
+
+
+            // const dbRefContact = firebase.database().ref().child('contact')
+            //   .set({name:this.name}, {email:this.email}, {content: this.content});
+            // console.log(dbRefContact);
+
+            // var newNoteKey = firebase.database().ref().child('notes').push().key;
+            // firebase
+            //   .database()
+            //   .ref('notes/' + this.user.uid + '/' + newNoteKey)
+            //   .set({name:this.name}, {email:this.email}, {content: this.content});
+
+            // const sendMail = ff.httpsCallable('sendMail')
+            // let parent = this;
+            // sendResults({destination: 'hoge@hoge.com'}).then(function (result) {
+            //   parent.snackbar = true
+            // })
+
+
+
+            // const sendMail = firebase.httpsCallable('sendMail')
+            // let parent = this
+            // sendResults({destination: 't04.ty0425aws@gmail.com'}).then(function (result) {
+            //   parent.snackbar = true
+            // })
           }
         }
     }
