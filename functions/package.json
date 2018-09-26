@@ -11,7 +11,7 @@
     "firebase-admin": "latest",
     "firebase-functions": "latest",
     "nodemailer": "^4.6.8",
-    "buefy": "^0.6.7",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue": "^2.5.13"
   }
 }

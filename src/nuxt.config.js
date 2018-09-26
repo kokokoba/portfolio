@@ -18,7 +18,8 @@ module.exports = {
   modules: [
     // provide path to the file with resources
     ['nuxt-sass-resources-loader', './assets/main.scss'],
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'nuxt-buefy',
 
   ],
   manifest: {
@@ -51,7 +52,6 @@ module.exports = {
     resolve(__dirname, 'css/main.css')
   ],
   plugins: [
-    '~plugins/buefy',
     '~plugins/firebase'
   ],
   /*
