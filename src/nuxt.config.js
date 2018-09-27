@@ -52,7 +52,8 @@ module.exports = {
     resolve(__dirname, 'css/main.css')
   ],
   plugins: [
-    '~plugins/firebase'
+    '~plugins/firebase',
+    '~plugins/vue-scrollto'
   ],
   /*
   ** Customize the progress bar color
