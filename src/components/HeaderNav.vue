@@ -96,13 +96,13 @@
     vertical-align: -0.18em;
   }
 
-  #test{
-    position: fixed;
-    width: 100%;
-    color: red;
-    border-top: solid 1px red;
-    top: 0px;
-    z-index: 2000;
-  }
+  /*#test{*/
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*color: red;*/
+    /*border-top: solid 1px red;*/
+    /*top: 0px;*/
+    /*z-index: 2000;*/
+  /*}*/
 
 </style>
