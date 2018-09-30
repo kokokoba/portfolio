@@ -1,7 +1,7 @@
 <template>
-  <div class="icon-area">
+  <div style="position: relative; display: flex; width: 100px; height: 100px; left: 50%; transform: translateX(-50%);">
     <transition name="icon">
-      <div v-show="isVisible" class="icon">🍣</div>
+      <div v-show="isVisible" style="font-size: 60px;">☺️</div>
     </transition>
   </div>
 </template>
@@ -36,21 +36,6 @@
 </script>
 
 <style scoped>
-  .icon-area {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px dashed #ddd;
-    background: #eee;
-  }
-  .icon {
-    font-size: 60px;
-  }
   .icon-enter-active,
   .icon-leave-active {
     transition: all 2s;

@@ -1,3 +1,17 @@
-import Vue from 'vue'
-import vueScrollto from 'vue-scrollto'
-Vue.component(vueScrollto)
+import Vue from 'vue';
+import VueScrollTo from 'vue-scrollto';
+
+Vue.component(VueScrollTo)
+Vue.use(VueScrollTo, {
+  container: "body",
+  duration: 500,
+  easing: "ease",
+  offset: 0,
+  force: true,
+  cancelable: true,
+  onStart: false,
+  onDone: false,
+  onCancel: false,
+  x: false,
+  y: true
+})

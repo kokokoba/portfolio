@@ -19,6 +19,7 @@
     "bulma": "^0.7.1",
     "bulma-extensions": "^3.0.0",
     "firebase": "^5.5.1",
+    "gsap": "^2.0.2",
     "lru-cache": "^4.1.3",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.2.3",
