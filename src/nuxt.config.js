@@ -1,4 +1,7 @@
 module.exports = {
+  router: {
+    base: '/portfolio/'
+  },
   /*
   ** Headers of the page
   */
@@ -25,8 +28,9 @@ module.exports = {
   ** Build configuration
   */
   // プラグインが動かなくなる
-  // buildDir: '../functions/nuxt',
+  buildDir: '../functions/nuxt',
   build: {
+    analyze: false,
     // アプリケーション内で一度だけインクルードする
     vendor: [
       'firebase',
@@ -60,7 +64,6 @@ module.exports = {
   ],
   css: [
     '~/assets/base.css',
-    // node.js module but we specify the lang
     { src: 'bulma', lang: 'sass' }
   ],
   manifest: {
