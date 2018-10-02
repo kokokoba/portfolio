@@ -14,12 +14,12 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/*.page-enter-active, .page-leave-active {*/
-  /*transition: opacity .5s;*/
-/*}*/
-/*.page-enter, .page-leave-to {*/
-  /*opacity: 0;*/
-/*}*/
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
 
 header {
   padding: 20px 20px 0px 20px;
@@ -42,6 +42,10 @@ a:hover {
 .pc {
   display: none;
 }
+
+/*.is-full {*/
+  /*width: 100%;*/
+/*}*/
 
 /* header
 ** -----------------------------------------
@@ -279,8 +283,11 @@ nav ul li a {
   }
 
   .timeline .timeline-item {
-    margin-left: 17em;
-    margin-right: 7em;
+    margin-left: 10em !important;
+    margin-right: 10em !important;
+  }
+  .timeline {
+    margin: 0px 70px;
   }
 
 

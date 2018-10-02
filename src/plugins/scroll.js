@@ -6,7 +6,7 @@ Vue.directive('clipscroll', {
 
     if(binding.value.start === binding.value.end) {
       TweenMax.to(el, 1, {
-        y: -50,
+        y: 0,
         opacity: 1
       });
       return
@@ -17,7 +17,7 @@ Vue.directive('clipscroll', {
       if (!hasRun && window.scrollY > binding.value.start) {
         hasRun = true;
         TweenMax.to(el, 1, {
-          y: -50,
+          y: 0,
           opacity: 1
         })
       }
@@ -28,33 +28,6 @@ Vue.directive('clipscroll', {
     window.addEventListener('scroll', f);
   }
 });
-
-// Vue.directive('drawscroll', {
-//   inserted: function(el, binding) {
-//     let f = function(evt) {
-//       var hasDrawn = false;
-//       if (!hasDrawn && window.scrollY > binding.value.start) {
-//         hasDrawn = true;
-//         TweenMax.set(el, {
-//           opacity: 1
-//         })
-//
-//         TweenMax.staggerFromTo(el.childNodes, 5, {
-//           drawSVG: false
-//         }, {
-//           drawSVG: true,
-//           y: -10,
-//           opacity: 1,
-//           ease: Sine.easeOut
-//         }, -0.1)
-//       }
-//       if (window.scrollY > binding.value.end) {
-//         window.removeEventListener('scroll', f)
-//       }
-//     }
-//     window.addEventListener('scroll', f)
-//   }
-// });
 
 
 

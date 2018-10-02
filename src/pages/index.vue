@@ -15,7 +15,6 @@
   import MyWorks from '~/components/MyWorks.vue'
   import MyContact from "~/components/MyContact"
   import FadeIn from "~/components/FadeIn"
-
   import {TweenMax} from 'gsap'
 
   export default {

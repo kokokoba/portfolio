@@ -1,20 +1,28 @@
 <template>
   <section id="profile">
-    <h2 class="subtitle">Profile</h2>
+      <h2 class="subtitle">Profile</h2>
       <div class="columns">
         <div class="column is-6">
           <img src="https://res.cloudinary.com/hx07dfrao/image/upload/v1537370773/kt-portfolio-app/profile.png">
           <div class="social">
             <ul>
-              <li><a href="https://twitter.com/t04_tatsuya" target="_blank"><i class="fab fa-twitter" style="color: #55acee;"></i></a></li>
-              <li><a href="https://github.com/kokokoba" target="_blank"><i class="fab fa-github" style="color: #000;"></i></a></li>
+              <li>
+                <a href="https://twitter.com/t04_tatsuya" target="_blank">
+                  <font-awesome-icon class="fab" :icon="['fab', 'twitter']" style="color: #55acee;"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/kokokoba" target="_blank">
+                  <font-awesome-icon class="fab" :icon="['fab', 'github']" style="color: #000;"/>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="column is-6">
           <h2 class="subtitle">@t04_tatsuya</h2>
-          <p class="has-text-left">学生時代に地元のWeb会社で半年間のインターンを経験後、新卒で都内のSierに入社。EC業界で販売管理の新規開発を担当</p>
-          <p class="has-text-left">現在はWeb系に転職活動中です。</p>
+          <p class="has-text-left">学生時代に地元のWeb会社で半年間のインターンを経験後、新卒で都内のSierに入社。</p>
+          <p class="has-text-left">EC業界で販売管理の新規開発を担当、現在はWeb系に転職活動中です。</p>
           <p class="has-text-left">東京に在住しているので、気軽に連絡ください！</p>
           <p class="has-text-left">得意言語: Vue.js Kotlin Java Spring Boot</p>
           <br>
@@ -53,5 +61,9 @@
 </script>
 
 <style scoped>
+
+ #profile .columns {
+   margin-bottom: 75px;
+ }
 
 </style>

@@ -1,26 +1,35 @@
 <template>
   <section id="works">
-    <h2 class="subtitle">Works</h2>
-    <div class="tile is-ancestor is-multiline is-mobile wrap is-gapless">
-      <div v-for="work in works" :key="work.id" class="tile is-parent" :class="changeColumn(work.orientation)">
-        <div class="tile is-child">
-          <p>
-            <img :src="imageSrc(work)">
-          </p>
+      <h2 class="subtitle">Works</h2>
+      <div class="tile is-ancestor is-multiline is-mobile wrap is-gapless">
+        <div v-for="work in works" :key="work.id" class="tile is-parent" :class="changeColumn(work.orientation)">
+          <div class="tile is-child">
+            <p>
+              <img :src="imageSrc(work)">
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="tile is-ancestor is-multiline is-mobile wrap">
-      <div class="tile is-parent is-12">
-        <div class="tile is-child">
-          <iframe src="https://player.vimeo.com/video/133762581" class="videoWidth" frameborder="0"
-                  webkitallowfullscreen mozallowfullscreen allowfullscreen>
-          </iframe>
-          <p><a href="https://vimeo.com/133762581"></a></p>
+      <div class="tile is-ancestor is-multiline is-mobile wrap">
+        <div class="tile is-parent is-6">
+          <div class="tile is-child">
+            <iframe src="https://player.vimeo.com/video/133762581" class="videoWidth" frameborder="0"
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
+            <p><a href="https://vimeo.com/133762581"></a></p>
+          </div>
+        </div>
+        <div class="tile is-parent is-6">
+          <div class="tile is-child">
+            <iframe src="https://www.youtube.com/embed/GRvji-g_lmc" class="videoWidth" frameborder="0"
+                    webkitallowfullscreen mozallowfullscreen  allowfullscreen>
+            </iframe>
+            <p><a href="https://youtu.be/GRvji-g_lmc"></a></p>
+          </div>
         </div>
       </div>
-    </div>
+
   </section>
 </template>
 

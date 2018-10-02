@@ -1,7 +1,9 @@
 <template>
   <header id="header" class="hero is-medium">
     <!--<span id="test">{{ scrollY }}</span>-->
-    <a href="#" id="return-top" v-scroll-to="'#header'"><i class="fa fa-chevron-circle-up fa-2x"></i></a>
+    <a href="#" id="return-top" v-scroll-to="'#header'">
+      <font-awesome-icon class="icon fa fa-2x" icon="chevron-circle-up"></font-awesome-icon>
+    </a>
     <div class="hero-head">
       <nav id="navbar" class="navbar has-shadow is-spaced is-transparent">
         <div class="container">
@@ -17,12 +19,9 @@
 
           <div id="navbarMenuHeroA" class="navbar-menu" :class="{ 'is-active': menuActive }">
             <div class="navbar-end">
-              <nuxt-link to="/" class="navbar-item"><span>Home</span></nuxt-link>
-              <nuxt-link to="/works" class="navbar-item"><span>Works</span></nuxt-link>
-              <nuxt-link to="/contact" class="navbar-item"><span>Contact</span></nuxt-link>
               <a href="pdf/resume.pdf" download="20180921職務経歴書.pdf" class="button is-primary">
                 <span class="icon">
-                  <i class="fas fa-download"></i>
+                  <font-awesome-icon icon="download"></font-awesome-icon>
                 </span>
                 <span>resume</span>
               </a>
@@ -35,8 +34,11 @@
 </template>
 
 <script>
+
+
   export default {
     name: "HeaderNav",
+
     data() {
       return {
         menuActive: false,
@@ -84,7 +86,7 @@
     transition: 0.3s ease;
   }
 
-  #return-top i:hover  {
+  #return-top svg:hover  {
     transform:translateY(-5px);
     transition: 0.3s ease;
     -webkit-transform:translateY(-5px);
@@ -95,14 +97,5 @@
     line-height: 1em;
     vertical-align: -0.18em;
   }
-
-  /*#test{*/
-    /*position: fixed;*/
-    /*width: 100%;*/
-    /*color: red;*/
-    /*border-top: solid 1px red;*/
-    /*top: 0px;*/
-    /*z-index: 2000;*/
-  /*}*/
 
 </style>

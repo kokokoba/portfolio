@@ -1,5 +1,3 @@
-const { resolve } = require('path')
-
 module.exports = {
   /*
   ** Headers of the page
@@ -26,7 +24,8 @@ module.exports = {
   /*
   ** Build configuration
   */
-  // buildDir: '../functions/nuxt',←プラグインが動かなくなる
+  // プラグインが動かなくなる
+  // buildDir: '../functions/nuxt',
   build: {
     // アプリケーション内で一度だけインクルードする
     vendor: [
@@ -48,6 +47,7 @@ module.exports = {
     }
   },
   plugins: [
+    '~plugins/fortawesome',
     '~plugins/firebase',
     '~plugins/vue-scrollto',
     '~plugins/scroll'
@@ -57,6 +57,11 @@ module.exports = {
     ['nuxt-sass-resources-loader', './assets/main.scss'],
     '@nuxtjs/pwa',
     'nuxt-buefy'
+  ],
+  css: [
+    '~/assets/base.css',
+    // node.js module but we specify the lang
+    { src: 'bulma', lang: 'sass' }
   ],
   manifest: {
     name: 'portfolio',
@@ -75,17 +80,6 @@ module.exports = {
     ],
     background_color: "#000000",
     theme_color: "#4DBA87"
-  },
-  css: [
-    // node.js module but we specify the lang
-    { src: 'bulma', lang: 'sass' },
-    '@fortawesome/fontawesome-free-webfonts',
-    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
-    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
-    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
-    // Css file in the project
-    // It is important to give an absolute path
-    resolve(__dirname, 'css/main.css')
-  ]
+  }
 }
 

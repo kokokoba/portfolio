@@ -1,14 +1,14 @@
 <template>
   <section id="skills">
-    <h2 class="subtitle">Skills</h2>
-    <transition-group name="skills" tag="div" @before-enter="beforeEnter" @after-enter="afterEnter" @enter-cancelled="afterEnter"
-                      class="columns is-multiline is-mobile wrap" >
-        <div v-for="(skill,index) in skills" :key="skill.id" :data-index="index" :data-test="index" class="column is-6-mobile is-4-tablet is-4-desktop">
-          <div class="column">
-            <p class="bd-notification is-primary">{{ skill.name }}</p>
+      <h2 class="subtitle">Skills</h2>
+      <transition-group name="skills" tag="div" @before-enter="beforeEnter" @after-enter="afterEnter" @enter-cancelled="afterEnter"
+                        class="columns is-multiline is-mobile wrap" >
+          <div v-for="(skill,index) in skills" :key="skill.id" :data-index="index" :data-test="index" class="column is-6-mobile is-4-tablet is-4-desktop">
+            <div class="column">
+              <p class="bd-notification is-primary">{{ skill.name }}</p>
+            </div>
           </div>
-        </div>
-      </transition-group>
+        </transition-group>
   </section>
 </template>
 
