@@ -1,10 +1,14 @@
 <template>
   <section class="container">
     <div id="main">
-      <my-profile class="fade" v-clipscroll="{ start: '0', end: '0'}"/>
-      <my-skills class="fade" v-clipscroll="{ start: '550', end: '950'}"/>
-      <my-works class="fade" v-clipscroll="{ start: '1050', end: '2800'}"/>
-      <my-contact class="fade" v-clipscroll="{ start: '2880', end: '3300'}"/>
+      <!--<my-profile class="fade" v-clipscroll="{ start: '0', end: '0'}"/>-->
+      <!--<my-skills class="fade" v-clipscroll="{ start: '550', end: '950'}"/>-->
+      <!--<my-works class="fade" v-clipscroll="{ start: '1050', end: '2800'}"/>-->
+      <!--<my-contact class="fade" v-clipscroll="{ start: '2880', end: '3300'}"/>-->
+      <my-profile/>
+      <my-skills/>
+      <my-works/>
+      <my-contact300/>
     </div>
   </section>
 </template>

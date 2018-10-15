@@ -38,7 +38,6 @@
 
   export default {
     name: "HeaderNav",
-
     data() {
       return {
         menuActive: false,
